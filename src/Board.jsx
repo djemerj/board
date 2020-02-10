@@ -43,10 +43,8 @@ class Board extends Component {
      */
     drop = (e, index) => {
         const draggedOverIndex = this.state.squares.findIndex(element => element.props.id === index);
-
-        let origin = this.state.squares[this.draggedIndex];
-        let target = this.state.squares[draggedOverIndex];
-
+        const origin = this.state.squares[this.draggedIndex];
+        const target = this.state.squares[draggedOverIndex];
         let squares = this.state.squares;
 
         squares[draggedOverIndex] = origin;
